@@ -3,6 +3,8 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: #556b2f;
+  font-family: Fraunces;
+  font-size: medium;
 }
 
 main {
