@@ -18,8 +18,11 @@ footer.page-footer {
 }
 nav{
     background-color: #b07946;
-    box-shadow: 0 0 20px 5px #151618;
+    box-shadow: 0 0 15px 5px #151618;
     margin-bottom: 1rem;
+}
+.dropdown-menu{
+    background-color: #b07946;
 }
 
 nav a {
