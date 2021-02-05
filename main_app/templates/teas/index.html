@@ -18,7 +18,7 @@
       <p><b>Description:</b> {{ tea.description }}</p>
       <p><b>Strength:</b> {{tea.strength}}</p>
       {% if tea.quantity <= 5 %}
-      <p style="color: red">Quantity: {{ tea.quantity }}</p>
+      <p style="color: red">Quantity: {{ tea.quantity }} - Restock Needed</p>
       {% else %}
       <p><b>Quantity:</b> {{ tea.quantity }} - Restock Needed</p>
       {% endif %}
