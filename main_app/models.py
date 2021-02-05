@@ -6,7 +6,7 @@ class Tea(models.Model):
     name = models.CharField(max_length=100)
     variety = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
-    caffeineLvl = models.PositiveIntegerField(
+    strength = models.PositiveIntegerField(
         default=1, validators=[MaxValueValidator(5), MinValueValidator(1)]
     )
     quantity = models.PositiveIntegerField(

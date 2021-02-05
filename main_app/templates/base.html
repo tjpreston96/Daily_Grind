@@ -9,18 +9,18 @@
     <title>The Daily Grind</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      rel="stylesheet"
       type="text/css"
       href="{% static 'css/style.css' %}"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
   </head>
-  <body>
+  <body >
     <header class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper" style="background-color: #b07946">
           <ul>
             <li>
               <a href="/" class="left brand-logo"
@@ -36,7 +36,7 @@
       </nav>
     </header>
     <main class="container">{% block content %} {% endblock %}</main>
-    <footer class="page-footer">
+    <footer class="page-footer" style="background-color: #b07946">
       <div class="right">
         All Rights Reserved, &copy; 2021 The Daily Grind &nbsp;
       </div>

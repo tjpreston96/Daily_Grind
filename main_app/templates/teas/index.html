@@ -1,4 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% block content %}
-
+<div class="card" style='background-color: #efe4d4; box-shadow: 0 0 20px 5px #151618;margin: 1rem;'>
+  <a href="/teas/{{ tea.id }}">
+    <div class="card-content">
+      <span class="card-title">{{ tea.name }}</span>
+      <p>Variety: {{ tea.variety }}</p>
+      <p>Description: {{ tea.description }}</p>
+      <p>Strength: {{tea.strength}}</p>
+      {% if tea.quantity <= 5 %}
+      <p>Quantity: {{ tea.quantity }}</p>
+      {% else %}
+      <p style='color: red'>Quantity: {{ tea.quantity }} - Restock Needed</p>
+      {% endif %}
+      <p>Full Box: {{ tea.quantPerBox }}</p>
+    </div>
+    <!-- and this following one as well -->
+  </a>
+</div>
 {% endblock %}
