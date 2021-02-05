@@ -6,12 +6,16 @@ class Tea(models.Model):
     name = models.CharField(max_length=100)
     variety = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
-    caffeineLvl = models.IntegerField(
+    caffeineLvl = models.PositiveIntegerField(
         default=1, validators=[MaxValueValidator(5), MinValueValidator(1)]
     )
-    quantity = models.IntegerField(
+    quantity = models.PositiveIntegerField(
         default=1, validators=[MaxValueValidator(100), MinValueValidator(1)]
     )
-    quantPerBox = models.IntegerField(
+    quantPerBox = models.PositiveIntegerField(
         default=1, validators=[MaxValueValidator(100), MinValueValidator(1)]
     )
+    
+
+    def __str__(self):
+        return self.name
