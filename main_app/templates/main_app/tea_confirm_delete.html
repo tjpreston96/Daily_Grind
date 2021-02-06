@@ -3,12 +3,13 @@
 <div class="card cardStyle deletePage">
   <h4 class="card-header">
     Are you sure you want to delete
-    <b><em>{{ object.name }}</em></b>?
+    <b><em>{{ object.name }}</em></b
+    >?
   </h4>
   <div class="buttonBlock">
     <form action="" method="POST">
       {% csrf_token %}
-      <!-- <input type="submit" value="Yes - Delete!" class="btn btn-lg confirmDelete" /> -->
+
       <button
         type="submit"
         value="Yes - Delete!"
@@ -16,12 +17,9 @@
       >
         Yes - Delete!
       </button>
-      <a href="{% url 'detail' tea.id %}" class="btn btn-lg cancelDelete"
+      <a href="{% url 'teas_detail' tea.id %}" class="btn btn-lg cancelDelete"
         >Cancel</a
       >
-      <!-- <button type="button" href="{% url 'detail' tea.id %}" class="btn btn-lg cancelDelete">
-        Cancel
-      </button> -->
     </form>
   </div>
 </div>
