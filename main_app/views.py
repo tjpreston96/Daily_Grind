@@ -50,3 +50,7 @@ def coffees_detail(request, coffee_id):
 class CoffeeCreate(CreateView):
     model = Coffee
     fields = "__all__"
+
+class CoffeeUpdate(UpdateView):
+    model = Coffee
+    fields = "__all__"
