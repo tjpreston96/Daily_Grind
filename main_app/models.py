@@ -27,7 +27,7 @@ class Tea(models.Model):
 
 class Coffee(models.Model):
     name = models.CharField(max_length=100)
-    variety = models.CharField(max_length=100)
+    blend = models.CharField(max_length=100)
     roast = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     strength = models.PositiveIntegerField(
