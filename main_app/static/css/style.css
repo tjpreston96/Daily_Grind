@@ -35,8 +35,8 @@ main a {
   color: #151618 !important;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
 form {
@@ -59,7 +59,6 @@ input {
   margin-top: 1rem;
   width: 30%;
   align-self: flex-end;
-  /* border: 1px solid #151618; */
   box-shadow: 0 0 1.5px 0.5px #151618;
 }
 
@@ -74,8 +73,7 @@ input {
   background-color: #556b2f;
   font-weight: 700;
   margin-top: 1rem;
-  align-self: flex-end;
-  border: .5px solid #151618;
+  border: 0.5px solid #151618;
   box-shadow: 0 0 1.5px 0.35px #151618;
 }
 
@@ -83,8 +81,7 @@ input {
   background-color: rgb(175, 53, 33);
   font-weight: 700;
   margin-top: 1rem;
-  align-self: flex-end;
-  border: .5px solid #151618;
+  border: 0.5px solid #151618;
   box-shadow: 0 0 1.5px 0.35px #151618;
 }
 
