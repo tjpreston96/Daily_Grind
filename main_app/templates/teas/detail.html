@@ -12,7 +12,7 @@
     {% if tea.quantity <= 5 %}
     <p style="color: rgb(230, 53, 33)"><b>Quantity:</b> {{ tea.quantity }} - Restock Needed</p>
     {% else %}
-    <p><b>Quantity:</b> {{ tea.quantity }} - Restock Needed</p>
+    <p><b>Quantity:</b> {{ tea.quantity }}</p>
     {% endif %}
     <p><b>Full Box:</b> {{ tea.quantPerBox }}</p>
   </div>
