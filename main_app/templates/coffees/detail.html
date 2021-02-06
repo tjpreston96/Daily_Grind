@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1><b>Coffee Details</b></h1>
+
+<div class="card cardStyle">
+  {% comment %} style="max-width: 18rem;" {% endcomment %}
+  <div class="card-header"><b>{{coffee.name}} </b></div>
+  <div class="card-body">
+    <p><b>Variety:</b> {{ coffee.variety }}</p>
+    <p><b>Roast:</b> {{ coffee.roast }}</p>
+    <p><b>Description:</b> {{ coffee.description }}</p>
+    <p><b>Strength:</b> {{coffee.strength}}</p>
+    {% if coffee.servings <= 5 %}
+    <p style="color: rgb(230, 53, 33)"><b>Servings:</b> {{ coffee.servings }} servings - Restock Needed</p>
+    {% else %}
+    <p><b>Servings:</b> {{ coffee.servings }} servings</p>
+    {% endif %}
+    <p><b>Full Bag:</b> {{ coffee.servPerBag }} servings</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'coffees_update' coffee.id %}" class="btn detailEdit">Edit</a>
+    <a
+      href="{% url 'coffees_delete' coffee.id %}"
+      class="btn detailDelete"
+      >Delete</a
+    >
+  </div>
+
+  {% endblock %}
+</div>

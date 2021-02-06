@@ -20,6 +20,15 @@ def teas_detail(request, tea_id):
     tea = Tea.objects.get(id=tea_id)
     return render(request, "teas/detail.html", {"tea": tea})
 
+def coffees_index(request):
+    coffees = Coffee.objects.all()
+    return render(request, "coffees/index.html", {"coffees": coffees})
+
+
+def coffees_detail(request, coffee_id):
+    coffee = Coffee.objects.get(id=coffee_id)
+    return render(request, "coffees/detail.html", {"coffee": coffee})
+
 
 class TeaCreate(CreateView):
     model = Tea
