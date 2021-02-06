@@ -1,6 +1,10 @@
 {% extends 'base.html' %} 
 {% block content %}
-<h1 style="text-align: center">Add Tea</h1>
+{% if object %}
+<h1><b>Edit <em>{{object.name}}</em></b></h1>
+{% else %}
+<h1><b>Add Tea</b></h1>
+{% endif %}
 <div
   style="
     display: flex;

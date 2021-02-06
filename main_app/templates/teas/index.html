@@ -3,13 +3,13 @@
 {%load static%}
 <h1 style="text-align: center"><b>Tea List</b></h1>
 {% for tea in teas %}
-<a href="{% url 'detail' tea.id %}">
+<a href="{% url 'teas_detail' tea.id %}">
   <div class="card cardStyle">
     <h5 class="card-header"><b>{{tea.name}}</b></h5>
     <div class="card-body">
       <p><b>Variety:</b> {{ tea.variety }}</p>
       <p><b>Description:</b> {{ tea.description }}</p>
-      <p><b>Strength:</b> {{tea.strength}}</p>
+      <p><b>Strength:</b> {{tea.strength}}/5</p>
       {% if tea.quantity <= 5 %}
       <p style="color: rgb(230, 53, 33)">
         <b>Quantity:</b> {{ tea.quantity }} - Restock Needed
