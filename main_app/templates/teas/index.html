@@ -1,28 +1,19 @@
 {% extends 'base.html' %} {% block content %}
-<h1 style="text-align: center">Tea List</h1>
+<h1 style="text-align: center"><b>Tea List</b></h1>
 {% for tea in teas %}
-<a href="/teas/{{ tea.id }}">
-  <div
-    class="card"
-    style="
-      background-color: #efe4d4;
-      box-shadow: 0 0 15px 5px #151618;
-      margin: 1rem;
-      padding: 0.5rem;
-    "
-  >
+<a href="{% url 'detail' tea.id %}">
+  <div class="card cardStyle">
     <h5 class="card-header"><b>{{tea.name}}</b></h5>
     <div class="card-body">
-      {% comment %}
-      <h5 class="card-title"><b>{{ tea.name }}</b></h5>
-      {% endcomment %}
       <p><b>Variety:</b> {{ tea.variety }}</p>
       <p><b>Description:</b> {{ tea.description }}</p>
       <p><b>Strength:</b> {{tea.strength}}</p>
       {% if tea.quantity <= 5 %}
-      <p style="color: red">Quantity: {{ tea.quantity }} - Restock Needed</p>
+      <p style="color: rgb(175, 53, 33)">
+        <b>Quantity:</b> {{ tea.quantity }} - Restock Needed
+      </p>
       {% else %}
-      <p><b>Quantity:</b> {{ tea.quantity }} - Restock Needed</p>
+      <p><b>Quantity:</b> {{ tea.quantity }}</p>
       {% endif %}
       <p><b>Full Box:</b> {{ tea.quantPerBox }}</p>
     </div>

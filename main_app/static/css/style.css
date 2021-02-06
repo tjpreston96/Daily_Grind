@@ -8,27 +8,87 @@ body {
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 footer.page-footer {
-    margin-top: 1rem;
-    padding-top: 0;
-    text-align: right;
+  margin-top: 1rem;
+  padding-top: 0;
+  text-align: right;
 }
-nav{
-    background-color: #b07946;
-    box-shadow: 0 0 15px 5px #151618;
-    margin-bottom: 1rem;
+
+nav {
+  background-color: #b07946;
+  box-shadow: 0 0 15px 5px #151618;
+  margin-bottom: 1rem;
 }
-.dropdown-menu{
-    background-color: #b07946;
+
+.dropdown-menu {
+  background-color: #b07946;
 }
 
 nav a {
-    color: #efe4d4 !important;
+  color: #efe4d4 !important;
 }
 
-main a{
-    color:#151618 !important;
+main a {
+  color: #151618 !important;
+}
+
+h1{
+    text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  margin: 0.2rem;
+}
+
+input {
+  width: 100%;
+  margin: 0.2rem;
+}
+
+.submit {
+  margin-top: 1rem;
+  width: 30%;
+  align-self: flex-end;
+  /* border: 1px solid #151618; */
+  box-shadow: 0 0 1.5px 0.5px #151618;
+}
+
+.cardStyle {
+  background-color: #efe4d4;
+  box-shadow: 0 0 15px 5px #151618;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.detailEdit {
+  background-color: #556b2f;
+  font-weight: 700;
+  margin-top: 1rem;
+  align-self: flex-end;
+  border: .5px solid #151618;
+  box-shadow: 0 0 1.5px 0.35px #151618;
+}
+
+.detailDelete {
+  background-color: rgb(175, 53, 33);
+  font-weight: 700;
+  margin-top: 1rem;
+  align-self: flex-end;
+  border: .5px solid #151618;
+  box-shadow: 0 0 1.5px 0.35px #151618;
+}
+
+@media only screen and (max-width: 450px) {
+  textarea {
+  }
 }

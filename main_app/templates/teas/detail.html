@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1><b>Tea Details</b></h1>
+
+<div class="card cardStyle">
+  {% comment %} style="max-width: 18rem;" {% endcomment %}
+  <div class="card-header"><b>{{tea.name}} </b></div>
+  <div class="card-body">
+    <p><b>Variety:</b> {{ tea.variety }}</p>
+    <p><b>Description:</b> {{ tea.description }}</p>
+    <p><b>Strength:</b> {{tea.strength}}</p>
+    {% if tea.quantity <= 5 %}
+    <p style="color: rgb(230, 53, 33)"><b>Quantity:</b> {{ tea.quantity }} - Restock Needed</p>
+    {% else %}
+    <p><b>Quantity:</b> {{ tea.quantity }} - Restock Needed</p>
+    {% endif %}
+    <p><b>Full Box:</b> {{ tea.quantPerBox }}</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'teas_update' tea.id %}" class="btn detailEdit">Edit</a>
+    <a
+      href="{% url 'teas_delete' tea.id %}"
+      class="btn detailDelete"
+      style="color: #efe4d4"
+      >Delete</a
+    >
+  </div>
+
+  {% endblock %}
+</div>

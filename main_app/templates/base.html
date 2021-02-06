@@ -24,7 +24,6 @@
     />
   </head>
   <body>
-    {% comment %} <header class="navbar-fixed"> {% endcomment %}
       <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <a class="navbar-brand" href="/">The Daily Grind</a>
         <button
@@ -41,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Timer</a>
@@ -62,8 +61,8 @@
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a class="dropdown-item" href="/teas">View All</a>
-                <a class="dropdown-item" href="#">Add New</a>
+                <a class="dropdown-item" href="{% url 'teas_index' %}">View All</a>
+                <a class="dropdown-item" href="{% url 'teas_create' %}">Add New</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -87,7 +86,6 @@
           </ul>
         </div>
       </nav>
-    {% comment %} </header> {% endcomment %}
     <main class="container">{% block content %} {% endblock %}</main>
     <footer class="page-footer" style="background-color: #b07946; box-shadow: 0 0 15px 5px #151618;">
       <div class="right">
