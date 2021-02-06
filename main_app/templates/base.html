@@ -80,8 +80,8 @@
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a class="dropdown-item" href="/coffees">View All</a>
-                <a class="dropdown-item" href="#">Add New</a>
+                <a class="dropdown-item" href="{% url 'coffees_index' %}">View All</a>
+                <a class="dropdown-item" href="{% url 'coffees_create'%}">Add New</a>
             </li>
           </ul>
         </div>
