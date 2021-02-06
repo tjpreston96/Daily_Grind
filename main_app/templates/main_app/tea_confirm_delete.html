@@ -1,15 +1,28 @@
 {% extends 'base.html' %} {% block content %}
 <h1><b>Delete Tea</b></h1>
-<div class="cardStyle">
-  <h4>
+<div class="card cardStyle deletePage">
+  <h4 class="card-header">
     Are you sure you want to delete
-    <span class="teal-text">{{ object.name }}</span>?
+    <b><em>{{ object.name }}</em></b>?
   </h4>
-
-  <form action="" method="POST">
-    {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn" />
-    <a href="{% url 'detail' tea.id %}">Cancel</a>
-  </form>
+  <div class="buttonBlock">
+    <form action="" method="POST">
+      {% csrf_token %}
+      <!-- <input type="submit" value="Yes - Delete!" class="btn btn-lg confirmDelete" /> -->
+      <button
+        type="submit"
+        value="Yes - Delete!"
+        class="btn btn-lg confirmDelete"
+      >
+        Yes - Delete!
+      </button>
+      <a href="{% url 'detail' tea.id %}" class="btn btn-lg cancelDelete"
+        >Cancel</a
+      >
+      <!-- <button type="button" href="{% url 'detail' tea.id %}" class="btn btn-lg cancelDelete">
+        Cancel
+      </button> -->
+    </form>
+  </div>
 </div>
 {% endblock %}

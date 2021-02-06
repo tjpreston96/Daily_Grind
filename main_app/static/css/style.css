@@ -67,6 +67,7 @@ input {
   box-shadow: 0 0 15px 5px #151618;
   margin: 1rem;
   padding: 0.5rem;
+  /* text-align: center; */
 }
 
 .detailEdit {
@@ -91,4 +92,29 @@ input {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.confirmDelete{
+    background-color:rgb(175, 53, 33);
+    font-weight: 700;
+    margin-top: .5rem;
+    border: 0.5px solid #151618;
+    box-shadow: 0 0 1.5px 0.35px #151618;
+
+}
+
+.cancelDelete{
+    background-color: #556b2f;
+    font-weight: 700;
+    margin-top: .5rem;
+    border: 0.5px solid #151618;
+    box-shadow: 0 0 1.5px 0.35px #151618;
+}
+
+.deletePage{
+    text-align: center;
+}
+
+.buttonBlock{
+    align-self: center;
 }

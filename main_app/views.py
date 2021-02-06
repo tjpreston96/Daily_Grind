@@ -24,6 +24,7 @@ def teas_detail(request, tea_id):
 class TeaCreate(CreateView):
     model = Tea
     fields = "__all__"
+    success_url = "/teas/"
 
 
 class TeaUpdate(UpdateView):
