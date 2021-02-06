@@ -11,6 +11,6 @@ urlpatterns = [
     path("teas/create/", views.TeaCreate.as_view(), name="teas_create"),
     path("teas/<int:pk>/update/", views.TeaUpdate.as_view(), name="teas_update"),
     path("teas/<int:pk>/delete/", views.TeaDelete.as_view(), name="teas_delete"),
-    # path("coffees/", views.coffees_index, name='coffees_index'),
-    # path("coffees/<int:coffee_id>/", views.coffees_detail, name='coffees_detail')
+    path("coffees/", views.coffees_index, name='coffees_index'),
+    path("coffees/<int:coffee_id>/", views.coffees_detail, name='coffees_detail')
 ]

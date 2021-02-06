@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Tea
+from .models import Tea, Coffee
 
 # Create your views here.
 def home(request):
