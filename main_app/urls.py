@@ -17,5 +17,7 @@ urlpatterns = [
     path(
         "coffees/<int:pk>/update/", views.CoffeeUpdate.as_view(), name="coffees_update"
     ),
-    path("coffees/<int:pk>/delete/", views.CoffeeDelete.as_view(), name="coffees_delete"),
+    path(
+        "coffees/<int:pk>/delete/", views.CoffeeDelete.as_view(), name="coffees_delete"
+    ),
 ]
