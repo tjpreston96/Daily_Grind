@@ -72,7 +72,7 @@ input {
 .detailEdit {
   background-color: #556b2f;
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: .5rem;
   border: 0.5px solid #151618;
   box-shadow: 0 0 1.5px 0.35px #151618;
 }
@@ -80,12 +80,15 @@ input {
 .detailDelete {
   background-color: rgb(175, 53, 33);
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: .5rem;
+  margin-left: .25rem;
   border: 0.5px solid #151618;
   box-shadow: 0 0 1.5px 0.35px #151618;
 }
 
-@media only screen and (max-width: 450px) {
-  textarea {
-  }
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }

@@ -33,4 +33,4 @@ class TeaUpdate(UpdateView):
 
 class TeaDelete(DeleteView):
     model = Tea
-    success_url = "/Teas/"
+    success_url = "/teas/"
