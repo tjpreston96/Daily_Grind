@@ -47,10 +47,17 @@ def coffees_detail(request, coffee_id):
     coffee = Coffee.objects.get(id=coffee_id)
     return render(request, "coffees/detail.html", {"coffee": coffee})
 
+
 class CoffeeCreate(CreateView):
     model = Coffee
     fields = "__all__"
 
+
 class CoffeeUpdate(UpdateView):
     model = Coffee
     fields = "__all__"
+
+
+class CoffeeDelete(DeleteView):
+    model = Coffee
+    success_url = "/coffees/"
