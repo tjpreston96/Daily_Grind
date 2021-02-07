@@ -49,3 +49,6 @@ class Coffee(models.Model):
 
     def get_absolute_url(self):
         return reverse("coffees_detail", kwargs={"coffee_id": self.id})
+
+    class Meta:
+        ordering = ['id']
