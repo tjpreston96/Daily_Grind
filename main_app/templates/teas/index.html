@@ -21,13 +21,13 @@
       <div class='formDiv'>
         <form action="{% url 'teas_brew' tea.id %}" method="POST" class='forms'>
           {% csrf_token %}
-          <button type="submit" class="btn detailEdit" style="width: 35%">
+          <button type="submit" class="btn detailEdit">
             Brew
           </button>
         </form>
         <form action="{% url 'teas_restock' tea.id %}" method="POST" class='forms'>
           {% csrf_token %}
-          <button type="submit" class="btn detailDelete" style="width: 35%">
+          <button type="submit" class="btn detailDelete idxRestockBtn" >
             Restock
           </button>
         </form>

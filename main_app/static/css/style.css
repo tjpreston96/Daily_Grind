@@ -66,8 +66,7 @@ input {
   background-color: #efe4d4;
   box-shadow: 0 0 15px 5px #151618;
   margin: 1rem;
-  padding: 0.5rem;
-  /* text-align: center; */
+  padding: .25rem;
 }
 
 .detailEdit {
@@ -76,7 +75,6 @@ input {
   margin-top: 0.5rem;
   border: 0.5px solid #151618;
   box-shadow: 0 0 1.5px 0.35px #151618;
-  /* max-width: 30%; */
 }
 
 .detailDelete {
@@ -95,11 +93,10 @@ input {
   text-align: center;
 }
 
-.formDiv{
-  display: inline;
+.formDiv {
+  display: flex;
+  flex-direction: row;
 }
-
-
 
 .confirmDelete {
   background-color: rgb(175, 53, 33);
@@ -123,4 +120,8 @@ input {
 
 .buttonBlock {
   align-self: center;
+}
+
+.idxRestockBtn {
+  margin-left: 0.5rem;
 }

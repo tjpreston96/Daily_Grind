@@ -10,7 +10,9 @@
     <p><b>Description:</b> {{ tea.description }}</p>
     <p><b>Strength:</b> {{tea.strength}}</p>
     {% if tea.quantity <= 5 %}
-    <p style="color: rgb(230, 53, 33)"><b>Quantity:</b> {{ tea.quantity }} - Restock Needed</p>
+    <p style="color: rgb(230, 53, 33)">
+      <b>Quantity:</b> {{ tea.quantity }} - Restock Needed
+    </p>
     {% else %}
     <p><b>Quantity:</b> {{ tea.quantity }}</p>
     {% endif %}
@@ -18,11 +20,7 @@
   </div>
   <div class="card-footer">
     <a href="{% url 'teas_update' tea.id %}" class="btn detailEdit">Edit</a>
-    <a
-      href="{% url 'teas_delete' tea.id %}"
-      class="btn detailDelete"
-      >Delete</a
-    >
+    <a href="{% url 'teas_delete' tea.id %}" class="btn detailDelete">Delete</a>
   </div>
 
   {% endblock %}
