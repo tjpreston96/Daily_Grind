@@ -29,6 +29,7 @@ def teas_brew(request, tea_id):
     tea.save()
     return redirect("teas_index")
 
+
 def teas_restock(request, tea_id):
     tea = Tea.objects.get(id=tea_id)
     tea.quantity += tea.quantPerBox
@@ -60,6 +61,20 @@ def coffees_index(request):
 def coffees_detail(request, coffee_id):
     coffee = Coffee.objects.get(id=coffee_id)
     return render(request, "coffees/detail.html", {"coffee": coffee})
+
+
+def coffees_brew(request, coffee_id):
+    coffee = Coffee.objects.get(id=coffee_id)
+    coffee.servings -= 1
+    coffee.save()
+    return redirect("coffees_index")
+
+
+def coffees_restock(request, coffee_id):
+    coffee = Coffee.objects.get(id=coffee_id)
+    coffee.servings += coffee.servPerBag
+    coffee.save()
+    return redirect("coffees_index")
 
 
 class CoffeeCreate(CreateView):

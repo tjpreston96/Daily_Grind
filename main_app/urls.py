@@ -19,10 +19,8 @@ urlpatterns = [
     path("coffees/", views.coffees_index, name="coffees_index"),
     path("coffees/<int:coffee_id>/", views.coffees_detail, name="coffees_detail"),
     path("coffees/create/", views.CoffeeCreate.as_view(), name="coffees_create"),
-    path(
-        "coffees/<int:pk>/update/", views.CoffeeUpdate.as_view(), name="coffees_update"
-    ),
-    path(
-        "coffees/<int:pk>/delete/", views.CoffeeDelete.as_view(), name="coffees_delete"
-    ),
+    path("coffees/<int:pk>/update/", views.CoffeeUpdate.as_view(), name="coffees_update"),
+    path("coffees/<int:pk>/delete/", views.CoffeeDelete.as_view(), name="coffees_delete"),
+    path("coffees/<int:coffee_id>/brew/", views.coffees_brew, name="coffees_brew"),
+    path("coffees/<int:coffee_id>/restock/", views.coffees_restock, name="coffees_restock"),
 ]
