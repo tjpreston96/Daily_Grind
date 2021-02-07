@@ -29,7 +29,11 @@ def teas_brew(request, tea_id):
     tea.save()
     return redirect("teas_index")
 
-
+def teas_restock(request, tea_id):
+    tea = Tea.objects.get(id=tea_id)
+    tea.quantity += tea.quantPerBox
+    tea.save()
+    return redirect("teas_index")
 
 
 class TeaCreate(CreateView):

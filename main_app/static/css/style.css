@@ -73,7 +73,7 @@ input {
 .detailEdit {
   background-color: #556b2f;
   font-weight: 700;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   border: 0.5px solid #151618;
   box-shadow: 0 0 1.5px 0.35px #151618;
   /* max-width: 30%; */
@@ -82,44 +82,47 @@ input {
 .detailDelete {
   background-color: rgb(175, 53, 33);
   font-weight: 700;
-  margin-top: .5rem;
-  margin-left: .25rem;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
   border: 0.5px solid #151618;
   box-shadow: 0 0 1.5px 0.35px #151618;
 }
 
-.home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.forms{
-  width: 30%;
+.formDiv{
+  display: inline;
 }
 
-.confirmDelete{
-    background-color:rgb(175, 53, 33);
-    font-weight: 700;
-    margin-top: .5rem;
-    border: 0.5px solid #151618;
-    box-shadow: 0 0 1.5px 0.35px #151618;
-
+.forms {
+  padding: 0;
 }
 
-.cancelDelete{
-    background-color: #556b2f;
-    font-weight: 700;
-    margin-top: .5rem;
-    border: 0.5px solid #151618;
-    box-shadow: 0 0 1.5px 0.35px #151618;
+.confirmDelete {
+  background-color: rgb(175, 53, 33);
+  font-weight: 700;
+  margin-top: 0.5rem;
+  border: 0.5px solid #151618;
+  box-shadow: 0 0 1.5px 0.35px #151618;
 }
 
-.deletePage{
-    text-align: center;
+.cancelDelete {
+  background-color: #556b2f;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  border: 0.5px solid #151618;
+  box-shadow: 0 0 1.5px 0.35px #151618;
 }
 
-.buttonBlock{
-    align-self: center;
+.deletePage {
+  text-align: center;
+}
+
+.buttonBlock {
+  align-self: center;
 }
