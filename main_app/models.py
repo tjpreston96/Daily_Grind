@@ -12,7 +12,7 @@ class Tea(models.Model):
         default=1, validators=[MaxValueValidator(5), MinValueValidator(1)]
     )
     quantity = models.PositiveIntegerField(
-        default=1, validators=[MaxValueValidator(100), MinValueValidator(1)]
+        default=1, validators=[MaxValueValidator(100), MinValueValidator(0)]
     )
     quantPerBox = models.PositiveIntegerField(
         default=1, validators=[MaxValueValidator(100), MinValueValidator(1)]
@@ -24,6 +24,9 @@ class Tea(models.Model):
     def get_absolute_url(self):
         return reverse("teas_detail", kwargs={"tea_id": self.id})
 
+    class Meta:
+        ordering = ['id']
+
 
 class Coffee(models.Model):
     name = models.CharField(max_length=100)
@@ -34,7 +37,7 @@ class Coffee(models.Model):
         default=5, validators=[MaxValueValidator(5), MinValueValidator(1)]
     )
     servings = models.PositiveIntegerField(
-        default=1, validators=[MaxValueValidator(100), MinValueValidator(1)]
+        default=1, validators=[MaxValueValidator(100), MinValueValidator(0)]
     )
 
     servPerBag = models.PositiveIntegerField(

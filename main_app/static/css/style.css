@@ -76,6 +76,7 @@ input {
   margin-top: .5rem;
   border: 0.5px solid #151618;
   box-shadow: 0 0 1.5px 0.35px #151618;
+  /* max-width: 30%; */
 }
 
 .detailDelete {
@@ -92,6 +93,10 @@ input {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.forms{
+  width: 30%;
 }
 
 .confirmDelete{

@@ -1,6 +1,4 @@
-{% extends 'base.html' %} 
-{% block content %}
-{%load static%}
+{% extends 'base.html' %} {% block content %} {%load static%}
 <h1 style="text-align: center"><b>Tea List</b></h1>
 {% for tea in teas %}
 <a href="{% url 'teas_detail' tea.id %}">
@@ -20,10 +18,19 @@
       <p><b>Full Box:</b> {{ tea.quantPerBox }}</p>
     </div>
     <div class="card-footer">
-      <a href="#" class="btn detailEdit">Brew</a>
-      <a href="#" class="btn detailDelete"
-        >Restock</a
-      >
+      <form action="{% url 'teas_brew' tea.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn detailEdit" style="max-width: 35%">
+          Brew
+        </button>
+      </form>
+      <div class="card-footer">
+        <form action="{% url 'teas_restock' tea.id %}" method="POST">
+          {% csrf_token %}
+          <button type="submit" class="btn detailDelete" style="max-width: 35%">
+            Restock 
+          </button>
+        </form>
     </div>
   </div>
 </a>
