@@ -9,7 +9,7 @@ class Tea(models.Model):
     variety = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     strength = models.PositiveIntegerField(
-        default=1, validators=[MaxValueValidator(5), MinValueValidator(1)]
+        default=1, validators=[MaxValueValidator(5), MinValueValidator(0)]
     )
     quantity = models.PositiveIntegerField(
         default=1, validators=[MaxValueValidator(100), MinValueValidator(0)]
@@ -34,7 +34,7 @@ class Coffee(models.Model):
     roast = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     strength = models.PositiveIntegerField(
-        default=5, validators=[MaxValueValidator(5), MinValueValidator(1)]
+        default=5, validators=[MaxValueValidator(5), MinValueValidator(0)]
     )
     servings = models.PositiveIntegerField(
         default=1, validators=[MaxValueValidator(100), MinValueValidator(0)]
