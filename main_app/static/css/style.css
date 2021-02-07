@@ -39,7 +39,7 @@ h1 {
   text-align: center;
 }
 
-form {
+.columnForm {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
@@ -99,9 +99,7 @@ input {
   display: inline;
 }
 
-.forms {
-  padding: 0;
-}
+
 
 .confirmDelete {
   background-color: rgb(175, 53, 33);

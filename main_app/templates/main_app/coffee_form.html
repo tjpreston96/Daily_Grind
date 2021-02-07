@@ -1,7 +1,7 @@
-{% extends 'base.html' %} 
-{% block content %}
-{% if object %}
-<h1><b>Edit <em>{{object.name}}</em></b></h1>
+{% extends 'base.html' %} {% block content %} {% if object %}
+<h1>
+  <b>Edit <em>{{object.name}}</em></b>
+</h1>
 {% else %}
 <h1><b>Add Coffee</b></h1>
 {% endif %}
@@ -16,7 +16,7 @@
     justify-content: center;
   "
 >
-  <form action="" method="post">
+  <form action="" method="post" class="columnForm">
     {% csrf_token %}
     <table>
       {{ form.as_table }}
