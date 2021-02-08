@@ -120,7 +120,15 @@ def coffees_restock(request, coffee_id):
 
 class CoffeeCreate(LoginRequiredMixin, CreateView):
     model = Coffee
-    fields = ["name", "blend",'roast', "description", "strength", "servings", "servPerBag"]
+    fields = [
+        "name",
+        "blend",
+        "roast",
+        "description",
+        "strength",
+        "servings",
+        "servPerBag",
+    ]
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -135,4 +143,3 @@ class CoffeeUpdate(LoginRequiredMixin, UpdateView):
 class CoffeeDelete(LoginRequiredMixin, DeleteView):
     model = Coffee
     success_url = "/coffees/"
-

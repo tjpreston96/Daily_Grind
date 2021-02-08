@@ -14,10 +14,10 @@ class Tea(models.Model, ):
         default=1, validators=[MaxValueValidator(5), MinValueValidator(0)]
     )
     quantity = models.PositiveIntegerField(
-        default=1, validators=[MaxValueValidator(100), MinValueValidator(0)]
+        default=1, validators=[MaxValueValidator(300), MinValueValidator(0)]
     )
     quantPerBox = models.PositiveIntegerField(
-        default=1, validators=[MaxValueValidator(100), MinValueValidator(1)]
+        default=1, validators=[MaxValueValidator(300), MinValueValidator(1)]
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
@@ -40,11 +40,11 @@ class Coffee(models.Model):
         default=5, validators=[MaxValueValidator(5), MinValueValidator(0)]
     )
     servings = models.PositiveIntegerField(
-        default=1, validators=[MaxValueValidator(100), MinValueValidator(0)]
+        default=1, validators=[MaxValueValidator(300), MinValueValidator(0)]
     )
 
     servPerBag = models.PositiveIntegerField(
-        default=1, validators=[MaxValueValidator(100), MinValueValidator(1)]
+        default=1, validators=[MaxValueValidator(300), MinValueValidator(1)]
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=User)
 
