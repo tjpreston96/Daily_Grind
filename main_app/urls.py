@@ -8,6 +8,8 @@ urlpatterns = [
     path("", views.home, name="home"),
     path("about/", views.about, name="about"),
     path("teas/", views.teas_index, name="teas_index"),
+    path('accounts/signup/', views.signup, name='signup'),
+
     # ===== TEAS =====
     path("teas/<int:tea_id>/", views.teas_detail, name="teas_detail"),
     path("teas/create/", views.TeaCreate.as_view(), name="teas_create"),
