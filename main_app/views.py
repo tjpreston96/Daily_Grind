@@ -5,6 +5,7 @@ from .models import Tea, Coffee
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # ============ AUTHENTICATION ============
 def signup(request):
@@ -37,16 +38,19 @@ def about(request):
 
 
 # ============ TEAS ============
+@login_required
 def teas_index(request):
     teas = Tea.objects.filter(user=request.user)
     return render(request, "teas/index.html", {"teas": teas})
 
 
+@login_required
 def teas_detail(request, tea_id):
     tea = Tea.objects.get(id=tea_id)
     return render(request, "teas/detail.html", {"tea": tea})
 
 
+@login_required
 def teas_brew(request, tea_id):
     tea = Tea.objects.get(id=tea_id)
     tea.quantity -= 1
@@ -54,6 +58,7 @@ def teas_brew(request, tea_id):
     return redirect("teas_index")
 
 
+@login_required
 def teas_restock(request, tea_id):
     tea = Tea.objects.get(id=tea_id)
     tea.quantity += tea.quantPerBox
@@ -61,7 +66,7 @@ def teas_restock(request, tea_id):
     return redirect("teas_index")
 
 
-class TeaCreate(CreateView):
+class TeaCreate(LoginRequiredMixin, CreateView):
     model = Tea
     fields = "__all__"
 
@@ -70,27 +75,30 @@ class TeaCreate(CreateView):
         return super().form_valid(form)
 
 
-class TeaUpdate(UpdateView):
+class TeaUpdate(LoginRequiredMixin, UpdateView):
     model = Tea
     fields = "__all__"
 
 
-class TeaDelete(DeleteView):
+class TeaDelete(LoginRequiredMixin, DeleteView):
     model = Tea
     success_url = "/teas/"
 
 
 # ============ COFFEES ============
+@login_required
 def coffees_index(request):
     coffees = Coffee.objects.filter(user=request.user)
     return render(request, "coffees/index.html", {"coffees": coffees})
 
 
+@login_required
 def coffees_detail(request, coffee_id):
     coffee = Coffee.objects.get(id=coffee_id)
     return render(request, "coffees/detail.html", {"coffee": coffee})
 
 
+@login_required
 def coffees_brew(request, coffee_id):
     coffee = Coffee.objects.get(id=coffee_id)
     coffee.servings -= 1
@@ -98,6 +106,7 @@ def coffees_brew(request, coffee_id):
     return redirect("coffees_index")
 
 
+@login_required
 def coffees_restock(request, coffee_id):
     coffee = Coffee.objects.get(id=coffee_id)
     coffee.servings += coffee.servPerBag
@@ -105,7 +114,7 @@ def coffees_restock(request, coffee_id):
     return redirect("coffees_index")
 
 
-class CoffeeCreate(CreateView):
+class CoffeeCreate(LoginRequiredMixin, CreateView):
     model = Coffee
     fields = "__all__"
 
@@ -114,11 +123,11 @@ class CoffeeCreate(CreateView):
         return super().form_valid(form)
 
 
-class CoffeeUpdate(UpdateView):
+class CoffeeUpdate(LoginRequiredMixin, UpdateView):
     model = Coffee
     fields = "__all__"
 
 
-class CoffeeDelete(DeleteView):
+class CoffeeDelete(LoginRequiredMixin, DeleteView):
     model = Coffee
     success_url = "/coffees/"
