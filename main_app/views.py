@@ -120,7 +120,7 @@ def coffees_restock(request, coffee_id):
 
 class CoffeeCreate(LoginRequiredMixin, CreateView):
     model = Coffee
-    fields = ["name", "blend", "description", "strength", "servings", "servPerBag"]
+    fields = ["name", "blend",'roast', "description", "strength", "servings", "servPerBag"]
 
     def form_valid(self, form):
         form.instance.user = self.request.user
