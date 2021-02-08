@@ -1,5 +1,4 @@
 appdirs==1.4.4
-arcade==2.5.3
 asgiref==3.3.1
 attrs==20.3.0
 black==20.8b1
