@@ -37,6 +37,10 @@ def about(request):
     return render(request, "about.html")
 
 
+def timer(request):
+    return render(request, "timer.html")
+
+
 # ============ TEAS ============
 @login_required
 def teas_index(request):
@@ -68,7 +72,7 @@ def teas_restock(request, tea_id):
 
 class TeaCreate(LoginRequiredMixin, CreateView):
     model = Tea
-    fields = "__all__"
+    fields = ["name", "variety", "description", "strength", "quantity", "quantPerBox"]
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -131,3 +135,4 @@ class CoffeeUpdate(LoginRequiredMixin, UpdateView):
 class CoffeeDelete(LoginRequiredMixin, DeleteView):
     model = Coffee
     success_url = "/coffees/"
+
