@@ -18,9 +18,9 @@ def signup(request):
             user = form.save()
             # This is how we log a user in via code
             login(request, user)
-            return redirect("index")
+            return redirect("home")
         else:
-            error_message = "Invalid sign up - try again"
+            error_message = "Invalid Sign Up - Try Again"
     # A bad POST or a GET request, so render signup.html with an empty form
     form = UserCreationForm()
     context = {"form": form, "error_message": error_message}
@@ -38,7 +38,7 @@ def about(request):
 
 # ============ TEAS ============
 def teas_index(request):
-    teas = Tea.objects.all()
+    teas = Tea.objects.filter(user=request.user)
     return render(request, "teas/index.html", {"teas": teas})
 
 
@@ -82,7 +82,7 @@ class TeaDelete(DeleteView):
 
 # ============ COFFEES ============
 def coffees_index(request):
-    coffees = Coffee.objects.all()
+    coffees = Coffee.objects.filter(user=request.user)
     return render(request, "coffees/index.html", {"coffees": coffees})
 
 

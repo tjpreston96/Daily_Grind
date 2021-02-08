@@ -1,12 +1,13 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-<h1>Log In</h1>
+<h1><b>Log In</b></h1>
 
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" class="btn" value="login">
-  <input type="hidden" name="next" value="{{ next }}">
-</form>
+<div class="cardStyle signupPage">
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %} <b>{{ form.as_p }}</b>
+    <button type="submit" class="btn signupBtn" value="login">Login</button>
+    <!-- <input type="submit" class="btn" value="login" /> -->
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+</div>
 {% endblock %}
