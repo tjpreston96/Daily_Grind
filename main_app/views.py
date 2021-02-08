@@ -81,7 +81,7 @@ class TeaCreate(LoginRequiredMixin, CreateView):
 
 class TeaUpdate(LoginRequiredMixin, UpdateView):
     model = Tea
-    fields = "__all__"
+    fields = ["name", "variety", "description", "strength", "quantity", "quantPerBox"]
 
 
 class TeaDelete(LoginRequiredMixin, DeleteView):
@@ -137,7 +137,15 @@ class CoffeeCreate(LoginRequiredMixin, CreateView):
 
 class CoffeeUpdate(LoginRequiredMixin, UpdateView):
     model = Coffee
-    fields = "__all__"
+    fields = [
+        "name",
+        "blend",
+        "roast",
+        "description",
+        "strength",
+        "servings",
+        "servPerBag",
+    ]
 
 
 class CoffeeDelete(LoginRequiredMixin, DeleteView):
