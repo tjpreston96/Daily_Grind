@@ -41,6 +41,10 @@ class TeaCreate(CreateView):
     model = Tea
     fields = "__all__"
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 
 class TeaUpdate(UpdateView):
     model = Tea
@@ -80,6 +84,10 @@ def coffees_restock(request, coffee_id):
 class CoffeeCreate(CreateView):
     model = Coffee
     fields = "__all__"
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
 class CoffeeUpdate(UpdateView):
