@@ -7,15 +7,15 @@ const timeBar = document.getElementById("time");
 let timerInterval;
 let min, sec;
 let seconds = 0;
-
+let initSec;
 startBtn.addEventListener("click", () => {
   if (timerInterval) {
     clearInterval(timerInterval);
     return (timerInterval = null);
   }
-//   if (seconds === 0) {
-//     break;
-//   }
+  // if (seconds === 0) {
+  //   break;
+  // }
   startTimer();
 });
 
@@ -50,6 +50,7 @@ function startTimer() {
 function render() {
   min = Math.floor(seconds / 60);
   sec = seconds % 60;
+  
   if (sec < 10) {
     timerEl.innerText = `${min}:0${sec}`;
   } else {
