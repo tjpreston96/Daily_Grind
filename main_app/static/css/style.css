@@ -71,6 +71,7 @@ input {
 
 .detailEdit {
   background-color: #556b2f;
+  color: #efe4d4;
   font-weight: 700;
   margin-top: 0.5rem;
   border: 0.5px solid #151618;
@@ -79,6 +80,7 @@ input {
 
 .detailDelete {
   background-color: rgb(175, 53, 33);
+  color: #efe4d4;
   font-weight: 700;
   margin-top: 0.5rem;
   margin-left: 0.25rem;
