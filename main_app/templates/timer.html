@@ -103,20 +103,16 @@
 
         <body>
             <h1><b>Tea Time</b></h1>
-            <div class="cardStyle">
+            <div class="cardStyle signupPage">
 
                 <h1 id="timer">0:00</h1>
-                Seconds
-                <div class="progress" style=" border: 1px solid #151618;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id='seconds' role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60"></div>
+                Time Remaining
+                <div class="progress" style=" border: 1px solid #151618; height: 2rem;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id='time' role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax='300'></div>
                 </div>
-                <br>
-                Minutes
-                <div class="progress" style=" border: 1px solid #151618;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" id='minutes' role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60"></div>
-                </div>
+              
                 
-                <br><br>
+                <br>
                 <button id="startButton" class="btn detailEdit">Start</button>
                 <button id="threeMinButton" class="btn detailDelete" style="background-color: #b07946;">3 Min</button>
                 <button id="fiveMinButton" class="btn detailDelete">5 Min</button>

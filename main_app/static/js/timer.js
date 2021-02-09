@@ -2,12 +2,11 @@ const timerEl = document.getElementById("timer");
 const startBtn = document.getElementById("startButton");
 const threeMinBtn = document.getElementById("threeMinButton");
 const fiveMinBtn = document.getElementById("fiveMinButton");
-const secBar = document.getElementById("seconds");
-const minBar = document.getElementById("minutes");
+const timeBar = document.getElementById("time");
 
 let timerInterval;
 let min, sec;
-let seconds = 15;
+let seconds = 0;
 
 startBtn.addEventListener("click", () => {
   if (timerInterval) {
@@ -31,7 +30,7 @@ fiveMinBtn.addEventListener("click", () => {
   clearInterval(timerInterval);
   seconds = 300;
   render();
-//   startTimer();
+  //   startTimer();
   return (timerInterval = null);
 });
 
@@ -51,14 +50,11 @@ function startTimer() {
 function render() {
   min = Math.floor(seconds / 60);
   sec = seconds % 60;
-  min = min % 60;
   if (sec < 10) {
     timerEl.innerText = `${min}:0${sec}`;
   } else {
     timerEl.innerText = `${min}:${sec}`;
   }
-  secBar.style = `width: ${(sec / 60) * 100}%`;
-  secBar.innerText = sec;
-  minBar.style = `width: ${(min / 5) * 100}%`;
-  minBar.innerText = min;
+  timeBar.style = `width: ${(sec / 60) * 100}%`;
+  timeBar.innerText = ` ${min} minutes ${sec} seconds`;
 }
