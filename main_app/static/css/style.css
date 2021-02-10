@@ -173,3 +173,17 @@ input {
 .timer{
   font-weight: 700;
 }
+
+h5{
+  text-align: center;
+}
+
+.sun{
+  align-self: center;
+  width: 35%;
+}
+
+.sunDiv{
+  display: flex;
+  flex-direction: column;
+}
