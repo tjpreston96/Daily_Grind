@@ -1,22 +1,40 @@
 # The Daily Grind
+
 View Application [Here!](https://the-daily-grind2021.herokuapp.com/)
+
 ## Wireframe Images:
+
 ![wireframe](images/Examples@2x.png)
+
 ## Final App Images:
+
 ![home](images/home.png)
 ![timer](images/Screen%20Shot%202021-02-09%20at%2011.32.09%20PM.png)
 ![teas_list](images/Screen%20Shot%202021-02-09%20at%2011.32.20%20PM.png)
+
 ## Trello:
+
 Here is a link to my [Trello](https://trello.com/b/KTqlafnG/daily-dose)...
 
 ## ERD:
-### Original Concept:
-![home](images/Unit4ERD.png)
-### Final ERD:
-![home](images/NewUnit4.png)
-## Description:
 
+### Original Concept:
+
+![home](images/Unit4ERD.png)
+
+### Final ERD:
+
+![home](images/NewUnit4.png)
+
+## Description:
+The Daily Grind is a Full CRUD Python/Django application with implemented authentication that allows users to keep track of kinds and quantities of teas and coffees. The application also includes a scripted Javascript timer for brew/steeping times.
 ## Instructions:
+
+1. Open App
+2. Sign up/Log in
+3. Add teas and coffees to database
+4. Brew and Restock accordingly
+5. Use 'Timer' to set timer for steeping tea at 3min & 5min intervals
 
 ## Technologies Used:
 
@@ -33,7 +51,7 @@ Here is a link to my [Trello](https://trello.com/b/KTqlafnG/daily-dose)...
 
 ## Next Steps:
 
-- [ ] Fix timer width to be percent of total time
+- [ ] Fix timer width to be percent of total time instead of per minute
 - [ ] Photos of Tea/Coffee
 - [ ] Shared Lists?
 - [ ] 'Explore' page to post recipes for others to try
