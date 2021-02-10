@@ -6,7 +6,7 @@ const timeBar = document.getElementById("time");
 
 let timerInterval;
 let min, sec;
-let seconds = 0;
+let seconds = 120;
 let initSec;
 startBtn.addEventListener("click", () => {
   if (timerInterval) {
