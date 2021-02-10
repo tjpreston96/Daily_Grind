@@ -1,6 +1,6 @@
 # The Daily Grind
-
-View Application [Here!](https://the-daily-grind2021.herokuapp.com/)
+![header_img](images/sun_PNG13427.png)
+## View Application [Here!](https://the-daily-grind2021.herokuapp.com/)
 
 ## Wireframe Images:
 
@@ -51,6 +51,7 @@ The Daily Grind is a Full CRUD Python/Django application with implemented authen
 
 ## Next Steps:
 
+- [ ] Favicon
 - [ ] Fix timer width to be percent of total time instead of per minute
 - [ ] Photos of Tea/Coffee
 - [ ] Shared Lists?
