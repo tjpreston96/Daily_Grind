@@ -53,7 +53,7 @@ The Daily Grind is a Full CRUD Python/Django application with implemented authen
 
 - [ ] Favicon
 - [ ] Fix timer width to be percent of total time instead of per minute
-- [ ] Timer sound of completion
+- [ ] Timer sound on completion
 - [ ] Photos of Tea/Coffee
 - [ ] Shared Lists?
 - [ ] 'Explore' page to post recipes for others to try
