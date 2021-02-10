@@ -34,7 +34,7 @@ The Daily Grind is a Full CRUD Python/Django application with implemented authen
 2. Sign up/Log in
 3. Add teas and coffees to database
 4. Brew and Restock accordingly
-5. Use 'Timer' to set timer for steeping tea at 3min & 5min intervals
+5. Use 'Timer' to set timer for steeping tea at 2min, 3min & 5min intervals
 
 ## Technologies Used:
 
@@ -53,6 +53,7 @@ The Daily Grind is a Full CRUD Python/Django application with implemented authen
 
 - [ ] Favicon
 - [ ] Fix timer width to be percent of total time instead of per minute
+- [ ] Timer sound of completion
 - [ ] Photos of Tea/Coffee
 - [ ] Shared Lists?
 - [ ] 'Explore' page to post recipes for others to try
