@@ -1,16 +1,22 @@
-# Daily_Grind
-
+# The Daily Grind
+View Application [Here!](https://the-daily-grind2021.herokuapp.com/)
 ## Wireframe Images:
-
+![wireframe](images/Examples@2x.png)
 ## Final App Images:
-
+![home](images/home.png)
+![timer](images/Screen%20Shot%202021-02-09%20at%2011.32.09%20PM.png)
+![teas_list](images/Screen%20Shot%202021-02-09%20at%2011.32.20%20PM.png)
 ## Trello:
+Here is a link to my [Trello](https://trello.com/b/KTqlafnG/daily-dose)...
 
 ## ERD:
-
+### Original Concept:
+![home](images/Unit4ERD.png)
+### Final ERD:
+![home](images/NewUnit4.png)
 ## Description:
 
-## Instructions
+## Instructions:
 
 ## Technologies Used:
 
