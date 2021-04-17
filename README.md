@@ -1,6 +1,10 @@
 # The Daily Grind
 ![header_img](images/sun_PNG13427.png)
+## Guest Information
+### Username: guest-user
+### Password: HaveABrew
 ## View Application [Here!](https://the-daily-grind2021.herokuapp.com/)
+
 
 ## Wireframe Images:
 
